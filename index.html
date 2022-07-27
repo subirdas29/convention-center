@@ -98,7 +98,7 @@
 
                     <div class="toast-container position-absolute top-50 end-0 translate-middle-y">
                         <div id="liveToast"
-                            class="toast border border-info border-end-0 border-top-0 border-bottom-0 border-opacity-100 border-5"
+                            class="toast show border border-info border-end-0 border-top-0 border-bottom-0 border-opacity-100 border-5"
                             role="alert" aria-live="assertive" aria-atomic="true">
                             <div class="toast-header">
                                 <img src="icons/Vector.svg" class="rounded me-2" alt="...">
@@ -108,33 +108,10 @@
                             </div>
                         </div>
                     </div>
-                    <script>
-                        const toastTrigger = document.getElementById('liveToastBtn')
-                        const toastLiveExample = document.getElementById('liveToast')
-                        if (toastTrigger) {
-                            toastTrigger.addEventListener('click', () => {
-                                const toast = new bootstrap.Toast(toastLiveExample)
-
-                                toast.show()
-                            })
-                        }
-                    </script>
 
                 </div>
 
-
             </div>
-            <script>
-                const toastTrigger = document.getElementById('liveToastBtn')
-                const toastLiveExample = document.getElementById('liveToast')
-                if (toastTrigger) {
-                    toastTrigger.addEventListener('click', () => {
-                        const toast = new bootstrap.Toast(toastLiveExample)
-
-                        toast.show()
-                    })
-                }
-            </script>
 
         </section>
 
