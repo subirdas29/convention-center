@@ -81,7 +81,7 @@
     </header>
     <main>
         <!-- Explore album section start -->
-        <section class="container py-5">
+        <section class="container py-5 position-relative">
             <div class="row row-cols-1 row-cols-lg-2 d-flex align-items-center">
                 <div class="cols">
                     <img src="images/wedding.png" alt="">
@@ -91,11 +91,50 @@
                     <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor
                         do amet sint. Velit officia consequat duis enim velit mollit.
                         Exercitation veniam consequat sunt nostrud ame</p>
-                    <div class="btn btn-info">Explore our album <img src="icons/arrow-forward 1.svg" alt=""></div>
+                    <div class="btn btn-info" id="liveToastBtn">Explore our album <img src="icons/arrow-forward 1.svg"
+                            alt=""></div>
+
+
+
+                    <div class="toast-container position-absolute top-50 end-0 translate-middle-y">
+                        <div id="liveToast"
+                            class="toast border border-info border-end-0 border-top-0 border-bottom-0 border-opacity-100 border-5"
+                            role="alert" aria-live="assertive" aria-atomic="true">
+                            <div class="toast-header">
+                                <img src="icons/Vector.svg" class="rounded me-2" alt="...">
+                                <strong class="me-auto">20% off of next booking</strong>
+                                <button type="button" class="btn-close" data-bs-dismiss="toast"
+                                    aria-label="Close"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        const toastTrigger = document.getElementById('liveToastBtn')
+                        const toastLiveExample = document.getElementById('liveToast')
+                        if (toastTrigger) {
+                            toastTrigger.addEventListener('click', () => {
+                                const toast = new bootstrap.Toast(toastLiveExample)
+
+                                toast.show()
+                            })
+                        }
+                    </script>
 
                 </div>
 
+
             </div>
+            <script>
+                const toastTrigger = document.getElementById('liveToastBtn')
+                const toastLiveExample = document.getElementById('liveToast')
+                if (toastTrigger) {
+                    toastTrigger.addEventListener('click', () => {
+                        const toast = new bootstrap.Toast(toastLiveExample)
+
+                        toast.show()
+                    })
+                }
+            </script>
 
         </section>
 
